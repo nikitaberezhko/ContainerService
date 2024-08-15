@@ -1,12 +1,12 @@
 using Asp.Versioning;
 using AutoMapper;
+using CommonModel.Contracts;
+using ContainerService.Contracts.Request.Container;
+using ContainerService.Contracts.Response;
+using ContainerService.Contracts.Response.Container;
 using Microsoft.AspNetCore.Mvc;
 using Services.Models.Request.Container;
 using Services.Services.Interfaces;
-using WebApi.Models;
-using WebApi.Models.Request.Container;
-using WebApi.Models.Response;
-using WebApi.Models.Response.Container;
 
 namespace WebApi.Controllers;
 

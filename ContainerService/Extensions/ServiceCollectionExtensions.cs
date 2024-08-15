@@ -16,6 +16,7 @@ using Services.Services.Interfaces;
 using Services.Validation.Container;
 using Services.Validation.Container.Validators;
 using Services.Validation.Type;
+using Services.Validation.Type.Validators;
 using WebApi.Mapper;
 using ExceptionHandlerMiddleware = WebApi.Middlewares.ExceptionHandlerMiddleware;
 
@@ -79,7 +80,7 @@ public static class ServiceCollectionExtensions
     
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
-        services.AddScoped<IContainerService, ContainerService>();
+        services.AddScoped<IContainerService, Services.Services.Implementations.ContainerService>();
         services.AddScoped<ITypeService, TypeService>();
         
         return services;

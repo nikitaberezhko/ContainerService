@@ -16,10 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{6F6BD3D2-A446-41F1-84CD-24A61C6071C2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusModels", "BusModels\BusModels.csproj", "{7DE344C2-7273-4A4B-BC57-A00B7D61971E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{1C1EA434-739D-4C81-B054-56260751889D}"
 EndProject
 Global
@@ -44,14 +40,6 @@ Global
 		{D764FE25-7E7B-4706-B9E1-14C1FF9A9DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D764FE25-7E7B-4706-B9E1-14C1FF9A9DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D764FE25-7E7B-4706-B9E1-14C1FF9A9DCA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F6BD3D2-A446-41F1-84CD-24A61C6071C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F6BD3D2-A446-41F1-84CD-24A61C6071C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F6BD3D2-A446-41F1-84CD-24A61C6071C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F6BD3D2-A446-41F1-84CD-24A61C6071C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DE344C2-7273-4A4B-BC57-A00B7D61971E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DE344C2-7273-4A4B-BC57-A00B7D61971E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DE344C2-7273-4A4B-BC57-A00B7D61971E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DE344C2-7273-4A4B-BC57-A00B7D61971E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C1EA434-739D-4C81-B054-56260751889D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C1EA434-739D-4C81-B054-56260751889D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C1EA434-739D-4C81-B054-56260751889D}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -1,9 +1,9 @@
 using AutoMapper;
+using ContainerService.Contracts.Request.Container;
+using ContainerService.Contracts.Response;
+using ContainerService.Contracts.Response.Container;
 using Services.Models.Request.Container;
 using Services.Models.Response.Container;
-using WebApi.Models.Request.Container;
-using WebApi.Models.Response;
-using WebApi.Models.Response.Container;
 
 namespace WebApi.Mapper;
 

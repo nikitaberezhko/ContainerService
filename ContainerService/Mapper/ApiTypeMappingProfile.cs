@@ -1,9 +1,9 @@
 using AutoMapper;
+using ContainerService.Contracts.Request.Type;
+using ContainerService.Contracts.Response;
+using ContainerService.Contracts.Response.Type;
 using Services.Models.Request.Type;
 using Services.Models.Response.Type;
-using WebApi.Models.Request.Type;
-using WebApi.Models.Response;
-using WebApi.Models.Response.Type;
 
 namespace WebApi.Mapper;
 
