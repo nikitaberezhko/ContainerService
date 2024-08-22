@@ -9,7 +9,7 @@ public class CreateContainerValidator : AbstractValidator<CreateContainerModel>
     {
         RuleFor(x => x.TypeId)
             .NotEmpty()
-            .NotEqual(0);
+            .GreaterThan(0);
 
         RuleFor(x => x.IsoNumber).NotEmpty();
     }

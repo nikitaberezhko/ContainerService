@@ -9,6 +9,6 @@ public class DeleteTypeValidator : AbstractValidator<DeleteTypeModel>
     {
         RuleFor(x => x.Id)
             .NotEmpty()
-            .NotEqual(0);
+            .GreaterThan(0);
     }
 }

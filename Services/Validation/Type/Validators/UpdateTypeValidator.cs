@@ -9,7 +9,7 @@ public class UpdateTypeValidator : AbstractValidator<UpdateTypeModel>
     {
         RuleFor(x => x.Id)
             .NotEmpty()
-            .NotEqual(0);
+            .GreaterThan(0);
         
         RuleFor(x => x.Name).NotEmpty();
         

@@ -59,7 +59,7 @@ public class TypeService(
         var types = await typeRepository.GetAllAsync(
             page: model.Page, 
             pageSize: model.PageSize);
-        var result = mapper.Map<List<TypeModel>>(source: types);
+        var result = mapper.Map<List<TypeModel>>(types);
         
         return result;
     }

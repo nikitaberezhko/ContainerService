@@ -9,6 +9,6 @@ public class GetTypeByIdValidator : AbstractValidator<GetTypeByIdModel>
     {
         RuleFor(x => x.Id)
             .NotEmpty()
-            .NotEqual(0);
+            .GreaterThan(0);
     }
 }

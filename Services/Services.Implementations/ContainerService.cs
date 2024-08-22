@@ -71,7 +71,7 @@ public class ContainerService(
                 page: model.Page, 
                 pageSize: model.PageSize, 
                 typeId: model.TypeId);
-        var result = mapper.Map<List<ContainerModel>>(source: containers);
+        var result = mapper.Map<List<ContainerModel>>(containers);
         
         return result;
     }

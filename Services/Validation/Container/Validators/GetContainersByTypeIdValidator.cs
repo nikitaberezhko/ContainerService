@@ -9,7 +9,7 @@ public class GetContainersByTypeIdValidator : AbstractValidator<GetContainersByT
     {
         RuleFor(x => x.TypeId)
             .NotEmpty()
-            .NotEqual(0);
+            .GreaterThan(0);
         
         RuleFor(x => x.Page).GreaterThan(0);
         
