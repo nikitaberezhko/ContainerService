@@ -13,4 +13,6 @@ public interface ITypeRepository
     Task<Type> GetByIdAsync(Type type);
 
     Task<List<Type>> GetAllAsync(int page, int pageSize);
+
+    Task<List<Type>> GetListTypesByIds(List<int> ids);
 }

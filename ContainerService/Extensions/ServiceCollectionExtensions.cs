@@ -9,12 +9,15 @@ using OpenTelemetry.Metrics;
 using Persistence.EntityFramework;
 using Services.Mapper;
 using Services.Models.Request.Container;
+using Services.Models.Request.Price;
 using Services.Models.Request.Type;
 using Services.Repositories.Interfaces;
 using Services.Services.Implementations;
 using Services.Services.Interfaces;
 using Services.Validation.Container;
 using Services.Validation.Container.Validators;
+using Services.Validation.Price;
+using Services.Validation.Price.Validators;
 using Services.Validation.Type;
 using Services.Validation.Type.Validators;
 using WebApi.Mapper;
@@ -54,6 +57,14 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<ContainerValidator>();
         
+        
+        
+        // Price
+        services.AddScoped<IValidator<GetContainersPriceModel>, GetContainersPriceValidator>();
+        
+        services.AddScoped<PriceValidator>();
+        
+        
         // Type
         services.AddScoped<IValidator<CreateTypeModel>, CreateTypeValidator>();
         services.AddScoped<IValidator<DeleteTypeModel>, DeleteTypeValidator>();
@@ -82,6 +93,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddScoped<IContainerService, Services.Services.Implementations.ContainerService>();
         services.AddScoped<ITypeService, TypeService>();
+        services.AddScoped<IPriceService, PriceService>();
         
         return services;
     }

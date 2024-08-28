@@ -12,7 +12,7 @@
     <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="CommonModel.Contracts" Version="1.0.0" />
-    <PackageReference Include="ContainerService.Contracts" Version="1.0.0" />
+    <PackageReference Include="ContainerService.Contracts" Version="1.1.1" />
     <PackageReference Include="Exceptions.Contracts" Version="1.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
     <PackageReference Include="MassTransit" Version="8.2.3" />

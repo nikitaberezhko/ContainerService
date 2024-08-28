@@ -79,4 +79,12 @@ public class TypeRepository(DbContext context) : ITypeRepository
 
         return types;
     }
+
+    public async Task<List<Type>> GetListTypesByIds(List<int> ids)
+    {
+        var containerTypes = await context.Set<Type>()
+            .Where(x => ids.Contains(x.Id) && !x.IsDeleted).ToListAsync();
+        
+        return containerTypes;
+    } 
 }

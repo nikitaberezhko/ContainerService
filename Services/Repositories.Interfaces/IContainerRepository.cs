@@ -21,4 +21,6 @@ public interface IContainerRepository
     Task<Container> GetByIsoAsync(Container container);
 
     Task<List<Container>> GetByTypeIdAsync(int page, int pageSize, int typeId);
+
+    Task<List<Container>> GetContainersByListIds(List<Guid> ids);
 }

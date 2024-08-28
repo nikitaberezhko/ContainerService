@@ -129,4 +129,13 @@ public class ContainerRepository(DbContext context) : IContainerRepository
 
         return containers;
     }
+
+    public async Task<List<Container>> GetContainersByListIds(List<Guid> ids)
+    {
+        var containers = await context.Set<Container>()
+            .Where(x => ids.Contains(x.Id) && !x.IsDeleted)
+            .ToListAsync();
+        
+        return containers;
+    }
 }
