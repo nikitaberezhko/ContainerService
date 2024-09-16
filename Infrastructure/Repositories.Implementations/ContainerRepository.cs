@@ -43,7 +43,7 @@ public class ContainerRepository(DbContext context) : IContainerRepository
         throw new InfrastructureException
         {
             Title = "Container not found",
-            Message = $"Container with id {container.Id} not found",
+            Message = $"Container with this id not found",
             StatusCode = StatusCodes.Status404NotFound
         };
     }
@@ -84,7 +84,7 @@ public class ContainerRepository(DbContext context) : IContainerRepository
         throw new InfrastructureException
         {
             Title = "Container not found",
-            Message = $"Container with id {container.Id} not found",
+            Message = $"Container with this id not found",
             StatusCode = StatusCodes.Status404NotFound
         };
     }
@@ -99,7 +99,7 @@ public class ContainerRepository(DbContext context) : IContainerRepository
         throw new InfrastructureException
         {
             Title = "Container not found",
-            Message = $"Container with id {container.Id} not found",
+            Message = $"Container with this id not found",
             StatusCode = StatusCodes.Status404NotFound
         };
     }
@@ -114,7 +114,7 @@ public class ContainerRepository(DbContext context) : IContainerRepository
         throw new InfrastructureException
         {
             Title = "Container not found",
-            Message = $"Container with iso number {container.IsoNumber} not found",
+            Message = $"Container with this iso number not found",
             StatusCode = StatusCodes.Status404NotFound
         };
     }

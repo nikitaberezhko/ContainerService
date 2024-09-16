@@ -146,25 +146,25 @@ public static class ServiceCollectionExtensions
             
             options.UsingRabbitMq((context, cfg) =>
             {
-                cfg.Host(rmqSettings.Host, rmqSettings.Vhost, h =>
+                cfg.Host(rmqSettings!.Host, rmqSettings.Vhost, h =>
                 {
                     h.Username(rmqSettings.Username);
                     h.Password(rmqSettings.Password);
                 });
 
-                cfg.ReceiveEndpoint("create-order", e =>
+                cfg.ReceiveEndpoint("container-create-order", e =>
                 {
                     e.ConfigureConsumer<CreateOrderConsumer>(context);
                     e.ExchangeType = "fanout";  
                 });
                 
-                cfg.ReceiveEndpoint("update-order", e =>
+                cfg.ReceiveEndpoint("container-update-order", e =>
                 {
                     e.ConfigureConsumer<UpdateOrderConsumer>(context);
                     e.ExchangeType = "fanout";  
                 });
                 
-                cfg.ReceiveEndpoint("delete-order", e =>
+                cfg.ReceiveEndpoint("container-delete-order", e =>
                 {
                     e.ConfigureConsumer<DeleteOrderConsumer>(context);
                     e.ExchangeType = "fanout";  

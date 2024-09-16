@@ -69,7 +69,8 @@ public class ContainerController(
     public async Task<ActionResult<CommonResponse<GetContainerByIsoResponse>>> GetByIso(
         [FromRoute] GetContainerByIsoRequest request)
     {
-        var container = await containerService.GetByIso(mapper.Map<GetContainerByIsoModel>(request));
+        var container = await containerService.GetByIso(
+            mapper.Map<GetContainerByIsoModel>(request));
         var response = new CommonResponse<GetContainerByIsoResponse>
             { Data = mapper.Map<GetContainerByIsoResponse>(container) };
         

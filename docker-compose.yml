@@ -2,20 +2,20 @@
   deploy-dev:
     driver: bridge
 services:
-#  app:
-#    container_name: container-service
-#    build:
-#      context: .
-#      dockerfile: ContainerService/Dockerfile
-#    environment:
-#      ASPNETCORE_ENVIRONMENT: Production
-#      ASPNETCORE_HTTP_PORTS: 8082
-#    ports:
-#      - "8082:8082"
-#    networks:
-#      - deploy-dev
-#    depends_on:
-#      - container-db
+  container:
+    container_name: container
+    build:
+      context: .
+      dockerfile: ContainerService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_HTTP_PORTS: 8082
+    ports:
+      - "8082:8082"
+    networks:
+      - deploy-dev
+    depends_on:
+      - container-db
   container-db:
     container_name: container-db
     image: postgres:latest

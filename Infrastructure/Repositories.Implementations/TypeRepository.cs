@@ -30,7 +30,7 @@ public class TypeRepository(DbContext context) : ITypeRepository
         throw new InfrastructureException
         {
             Title = "Container type not found",
-            Message = $"Container type with id {type.Id} not found",
+            Message = $"Container type with this id not found",
             StatusCode = StatusCodes.Status404NotFound
         };
     }
@@ -49,7 +49,7 @@ public class TypeRepository(DbContext context) : ITypeRepository
         throw new InfrastructureException
         {
             Title = "Container type not found",
-            Message = $"Container type with id {type.Id} not found",
+            Message = $"Container type with this id not found",
             StatusCode = StatusCodes.Status404NotFound
         }; 
     }
@@ -64,7 +64,7 @@ public class TypeRepository(DbContext context) : ITypeRepository
         throw new InfrastructureException
         {
             Title = "Container type not found",
-            Message = $"Container type with id {type.Id} not found",
+            Message = $"Container type with this id not found",
             StatusCode = StatusCodes.Status404NotFound
         };
     }

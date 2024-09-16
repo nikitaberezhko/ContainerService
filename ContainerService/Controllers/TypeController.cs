@@ -42,7 +42,7 @@ public class TypeController(
     }
     
     
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     public async Task<ActionResult<CommonResponse<DeleteTypeResponse>>> Delete(
         [FromRoute] DeleteTypeRequest request)
     {
@@ -54,7 +54,7 @@ public class TypeController(
     }
     
     
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<ActionResult<CommonResponse<GetTypeByIdResponse>>> GetById(
         [FromRoute]GetTypeByIdRequest request)
     {
