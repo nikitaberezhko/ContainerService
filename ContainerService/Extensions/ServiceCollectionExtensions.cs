@@ -7,6 +7,7 @@ using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using OpenTelemetry.Metrics;
 using Persistence.EntityFramework;
+using Serilog;
 using Services.Mapper;
 using Services.Models.Request.Container;
 using Services.Models.Request.Price;
@@ -173,6 +174,16 @@ public static class ServiceCollectionExtensions
 
         });
         
+        return services;
+    }
+    
+    public static IServiceCollection ConfigureSerilog(this IServiceCollection services)
+    {
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console()
+            .CreateLogger();
+        services.AddSerilog();
+
         return services;
     }
     

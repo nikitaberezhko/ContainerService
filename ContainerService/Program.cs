@@ -24,6 +24,7 @@ namespace WebApi
 			services.AddExceptionHandling();
 			services.ConfigureMassTransit(builder.Configuration);
 			services.AddTelemetry();
+			services.ConfigureSerilog();
 			
 
 			var app = builder.Build();
