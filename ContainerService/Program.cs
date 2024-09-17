@@ -27,7 +27,7 @@ namespace WebApi
 			services.AddExceptionHandling();
 			services.ConfigureMassTransit(builder.Configuration);
 			services.AddTelemetry();
-			services.ConfigureSerilogAndZipkinTracing();
+			services.ConfigureSerilogAndZipkinTracing(builder.Configuration);
 			
 
 			var app = builder.Build();
