@@ -1,3 +1,4 @@
+using SerilogTracing;
 using WebApi.Extensions;
 using WebApi.Middlewares;
 
@@ -9,7 +10,9 @@ namespace WebApi
 		{
 			var builder = WebApplication.CreateBuilder(args);
 			var services = builder.Services;
-			
+			using var listener = new ActivityListenerConfiguration()
+				.TraceToSharedLogger();
+
 			services.AddControllers();
 			
 			// Extensions
@@ -24,7 +27,7 @@ namespace WebApi
 			services.AddExceptionHandling();
 			services.ConfigureMassTransit(builder.Configuration);
 			services.AddTelemetry();
-			services.ConfigureSerilog();
+			services.ConfigureSerilogAndZipkinTracing();
 			
 
 			var app = builder.Build();

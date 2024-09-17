@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using OpenTelemetry.Metrics;
 using Persistence.EntityFramework;
 using Serilog;
+using SerilogTracing;
 using Services.Mapper;
 using Services.Models.Request.Container;
 using Services.Models.Request.Price;
@@ -177,10 +178,12 @@ public static class ServiceCollectionExtensions
         return services;
     }
     
-    public static IServiceCollection ConfigureSerilog(this IServiceCollection services)
+    public static IServiceCollection ConfigureSerilogAndZipkinTracing(this IServiceCollection services)
     {
         Log.Logger = new LoggerConfiguration()
+            .Enrich.WithProperty("Application", "ContainerService")
             .WriteTo.Console()
+            .WriteTo.Zipkin("http://localhost:9411")
             .CreateLogger();
         services.AddSerilog();
 
